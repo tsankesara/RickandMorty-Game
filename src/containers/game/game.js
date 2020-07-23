@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Grid from './components/grid';
+
 import {chars, names} from '../../data/characters'
 // import Grid from './components/'
 class Game extends Component{
@@ -6,14 +8,13 @@ class Game extends Component{
         data: chars,
         names: names,
     }
+    clicked = (index) => {
+        const msg = 'Hey' + index + 'was cliked!'
+        alert(msg)
+        }
     render(){
-        const names = this.state.names.map((name) => {
-            return(<p>{name}</p>)
-        })
-        const tri = this.state.data.map((d) => {
-        return(<h1>{d.name}</h1>);
-        });
-    return(<div>{tri}{names}</div>);
+        
+    return(<div><Grid clicked={this.clicked} data={this.state.data}/></div>);
 
     }
 
