@@ -13346,9 +13346,9 @@ const pickRandom = (arr, count) => {
     let _arr = [...arr];
     return[...Array(count)].map( ()=> _arr.splice(Math.floor(Math.random() * _arr.length), 1)[0] ); }
     const chars = pickRandom(characters, 9)
-    const names = chars.map((char) => {
-        return char.name
+    const namees = chars.map((char) => {
+        return char.name;
 });
 
 export {chars,
-       names}
+       namees}
