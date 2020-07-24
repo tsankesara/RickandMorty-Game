@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Grid from './components/grid';
-
+import style from './game.module.css';
 import {chars, names} from '../../data/characters'
 // import Grid from './components/'
 class Game extends Component{
@@ -8,13 +8,10 @@ class Game extends Component{
         data: chars,
         names: names,
     }
-    clicked = (index) => {
-        const msg = 'Hey' + index + 'was cliked!'
-        alert(msg)
-        }
+    clicked = (id) => {}
     render(){
         
-    return(<div><Grid clicked={this.clicked} data={this.state.data}/></div>);
+    return(<div className={style.gridd} ><Grid clicked={this.clicked} data={this.state.data}/></div>);
 
     }
 

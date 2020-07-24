@@ -1,0 +1,10 @@
+.gridd{
+    margin-top: 100px;
+    width: 1000px;
+    position: absolute;
+    /* border: 3px solid #73AD21; */
+    overflow: hidden;
+    display: block;
+    padding-left: 20px;
+}
+/* style={{'margin': 'auto','width': '1000px','height': '500px', 'float': 'left'}} */

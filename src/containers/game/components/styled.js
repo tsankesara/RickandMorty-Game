@@ -1,74 +1,16 @@
-import styled, { keyframes } from 'styled-components';
-
-export const Header = styled.div`
-  font: 12px 'Orbitron', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 50px 50px 30px;
-
-  header {
-    margin: 10px;
-    user-select: none;
-
-    @media only screen and (max-width: 600px) {
-      margin-top: -30px;
-    }
-
-    h1 {
-      font-size: 4em;
-      -webkit-text-stroke: 1px #f5f5f5;
-
-      @media only screen and (max-width: 600px) {
-        text-align: center;
-        font-size: 2.5em;
-      }
-
-      span {
-        color: #21d8ff;
-      }
-    }
-  }
-
-  ul {
-    display: flex;
-    font-size: 1.5em;
-    margin-top: 5px;
-
-    a {
-      text-decoration: none;
-
-      :first-child,
-      :last-child {
-        color: inherit;
-      }
-
-      li {
-        padding: 0 10px;
-        cursor: pointer;
-        transition: color 100ms ease-in-out;
-
-        :hover {
-          @media only screen and (min-width: 600px) {
-            color: #21d8ff;
-          }
-        }
-      }
-    }
-  }
-`;
+import styled from 'styled-components';
 
 export const Card = styled.li`
   color: #fff;
   background: #7d12ff;
-  margin: 10px;
+  margin:15px;
+  margin-top: 40px;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   position: relative;
+  height: 200px;
 
   backdrop-filter: blur(5px);
   border: 4px solid #ab20fd;
@@ -148,39 +90,4 @@ export const CardGrid = styled.ul`
   grid-gap: 15px;
 `;
 
-export const PageNumber = styled.li`
-  color: ${({ actualPage }) => (actualPage ? '#21d8ff' : '#000')};
-`;
 
-const spinnerAnimation = keyframes`
-  0% {
-      transform: translate3d(-50%, -50%, 0) rotate(0deg);
-  }
-  100% {
-        transform: translate3d(-50%, -50%, 0) rotate(360deg);
-  }
-`;
-
-export const Spinner = styled.div`
-  height: 100vh;
-  opacity: 1;
-  position: relative;
-  transition: opacity linear 0.1s;
-
-  &::before {
-    animation: 2s linear infinite ${spinnerAnimation};
-    border: solid 3px #7159c1;
-    border-bottom-color: #21d8ff;
-    border-radius: 50%;
-    content: '';
-    height: 40px;
-    left: 50%;
-    opacity: inherit;
-    position: absolute;
-    top: 25%;
-    transform: translate3d(-50%, -50%, 0);
-    transform-origin: center;
-    width: 40px;
-    will-change: transform;
-  }
-`;

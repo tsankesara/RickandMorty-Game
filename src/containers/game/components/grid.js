@@ -1,6 +1,5 @@
 import React from 'react';
-import { CardGrid, Card, Header, PageNumber, Spinner } from './styled';
-import { Container } from 'react-bootstrap';
+import { CardGrid, Card} from './styled';
 
 const Grid = (props) => {
 
@@ -11,7 +10,7 @@ const Grid = (props) => {
             return(
                 <Card
                 key = {dat.id}>
-                <img onClick={() => props.clicked(index)} src={dat.image} alt={dat.name}/>
+                <img onClick={() => props.clicked(dat.id)} src={dat.image} alt={dat.name}/>
                 </Card>
             );
         })}
