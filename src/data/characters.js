@@ -13351,4 +13351,4 @@ const pickRandom = (arr, count) => {
 });
 
 export {chars,
-       namees}
+       namees, characters}

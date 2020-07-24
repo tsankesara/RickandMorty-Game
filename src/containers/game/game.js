@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Grid from './components/grid';
 import style from './game.module.css';
-import {chars, namees} from '../../data/characters'
+import {chars, namees, characters} from '../../data/characters'
 // import Grid from './components/'
 class Game extends Component{
     state = {
@@ -17,6 +17,13 @@ class Game extends Component{
     componentDidUpdate(){
         if ([...this.state.data].length < 4)
         {
+            const pickRandom = (arr, count) => {
+                let _arr = [...arr];
+                return[...Array(count)].map( ()=> _arr.splice(Math.floor(Math.random() * _arr.length), 1)[0] ); }
+                const chars = pickRandom(characters, 9)
+                const namees = chars.map((char) => {
+                    return char.name;
+            });
             this.setState({data: chars, names: namees})
         }
     }
