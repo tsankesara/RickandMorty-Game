@@ -60,8 +60,10 @@ class Game extends Component{
     render(){
         
     return(<>
-    <h1 style={{'color': '#04bef1', 'float': 'right'}}>{this.state.curr_name}</h1>
-    <h1>{this.state.counter}</h1>
+    <div style={{'color': '#04bef1', 'float': 'right', 'marginTop': '100px', 'marginRight': '100px', 'width': '400px'}}>
+    <h1>{this.state.curr_name}</h1>
+    <h1>{this.state.counter}</h1> </div>
+    
     <div className={style.gridd} ><Grid clicked={this.clicked} data={this.state.data}/></div></>);
 
     }
