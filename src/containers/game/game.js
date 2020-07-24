@@ -12,7 +12,13 @@ class Game extends Component{
     }
     componentDidMount() {
         let randomEle = this.state.names[Math.floor(Math.random() * this.state.names.length)];
-        this.setState({curr_name: randomEle})  
+        this.setState({curr_name: randomEle})
+    }
+    componentDidUpdate(){
+        if ([...this.state.data].length < 4)
+        {
+            this.setState({data: chars, names: namees})
+        }
     }
     // randomElement = ([...this.state.names]) => this.state.names[Math.floor(Math.random() * this.state.names.length)];
     // randomName = (names) => {
@@ -48,6 +54,7 @@ class Game extends Component{
         
     return(<>
     <h1 style={{'color': '#04bef1', 'float': 'right'}}>{this.state.curr_name}</h1>
+    <h1>{this.state.counter}</h1>
     <div className={style.gridd} ><Grid clicked={this.clicked} data={this.state.data}/></div></>);
 
     }
