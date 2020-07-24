@@ -60,10 +60,10 @@ class Game extends Component{
     render(){
         
     return(<>
-    <div style={{'color': '#04bef1', 'float': 'right', 'marginTop': '100px', 'marginRight': '100px', 'width': '400px'}}>
-    <h1>Choose Image of given Name</h1>
-    <h1><span style={{'color': 'black'}}>Name: </span> {this.state.curr_name}</h1>
-    <h1><span style={{'color': 'black'}}>Score: </span> {this.state.counter}</h1> 
+    <div style={{'color': '#04bef1', 'float': 'right', 'marginTop': '100px', 'marginRight': '100px', 'width': '700px'}}>
+    <h4 style={{'color': 'black', 'fontWeight': 'bold'}} >Choose Image of given Name</h4>
+    <h1><span style={{'color': 'black', 'fontWeight': 'bold'}}>Name: </span> {this.state.curr_name}</h1>
+    <h1><span style={{'color': 'black', 'fontWeight': 'bold'}}>Score: </span> {this.state.counter}</h1> 
     <h3>Created By- Teerth Sankesara</h3></div>
     
     <div className={style.gridd} ><Grid clicked={this.clicked} data={this.state.data}/></div></>);
