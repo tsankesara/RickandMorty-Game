@@ -58,9 +58,13 @@ class Game extends Component{
         console.log(names)
       }
     render(){
-        
+        const divResstyle ={'color': '#04bef1', 
+        'float': 'bottom', 
+        'marginTop': '200px', 
+        'marginLeft': '100px', 
+        'width': '700px'}
     return(<>
-    <div style={{'color': '#04bef1', 'float': 'right', 'marginTop': '100px', 'marginRight': '100px', 'width': '700px'}}>
+    <div style={divResstyle}>
     <h4 style={{'color': 'black', 'fontWeight': 'bold'}} >Choose Image of given Name</h4>
     <h1><span style={{'color': 'black', 'fontWeight': 'bold'}}>Name: </span> {this.state.curr_name}</h1>
     <h1><span style={{'color': 'black', 'fontWeight': 'bold'}}>Score: </span> {this.state.counter}</h1> 
